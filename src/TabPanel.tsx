@@ -1,6 +1,7 @@
 import { Box, Tab, Tabs, Typography } from "@mui/material";
 import { useState } from "react";
 import { ConvertHexToRgb } from "./ConvertHexToRgb";
+import { TrainingData } from "./TrainingData";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -44,18 +45,14 @@ export default function BasicTabs() {
           aria-label="basic tabs example"
         >
           <Tab label="Convert HEX to RGB" />
-          <Tab label="Item Two" />
-          <Tab label="Item Three" />
+          <Tab label="Данные о тренировках" />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
         <ConvertHexToRgb />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
+        <TrainingData />
       </TabPanel>
     </Box>
   );
